@@ -81,7 +81,7 @@ output1, output2 = main_strategy()
     \n昨天(留倉 - 前5日平均)：%.2f\n與昨天差距：%.2f\n當日留倉大於前五日平均幾%s：%.2f%s\n\n%s\n\n%s'
     %(date_today, today, yest, avg, res, res2, diff, '%', percent, '%', output1, output2))'''
 
-headers = {"Authorization": "Bearer " + "32GQlyp6HT1vXjYJhJ1aiJMZ5yoG3ZxEWv2Oq4ZKTBe",
+headers = {"Authorization": "Bearer " + "your token",
             "Content-Type": "application/x-www-form-urlencoded"}
 params = {'message':'今天%s外資留倉：%d\n昨天留倉：%d\n前五日平均：%.2f\n(留倉 - 前5日平均)：%.2f\
     \n昨天(留倉 - 前5日平均)：%.2f\n與昨天差距：%.2f\n當日留倉大於前五日平均幾%s：%.2f%s\n\n%s\n\n%s'
