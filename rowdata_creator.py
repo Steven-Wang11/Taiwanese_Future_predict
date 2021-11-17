@@ -33,7 +33,7 @@ def prepare(): # 數據前置準備
 
 
 def web_value_get(url): # 開始爬數據
-    req = requests.get(url)
+    req = requests.get(url, verify = False)
     soup = BeautifulSoup(req.content, 'html.parser')
     soup_string = str(soup) # etree only support string type of html data
     selector=etree.HTML(soup_string)

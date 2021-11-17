@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 from lxml import etree
 import requests
 ## 如果網站日期小於昨天(避免假日補班日)
-req = requests.get("https://www.taifex.com.tw/cht/3/futContractsDate")
+req = requests.get("https://www.taifex.com.tw/cht/3/futContractsDate", verify=False)
 soup = BeautifulSoup(req.content, 'html.parser')
 soup_string = str(soup)
 selector=etree.HTML(soup_string)

@@ -23,7 +23,7 @@ def get_csv():
     return origin_csv
 
 def get_value(url):
-    req = requests.get(url)
+    req = requests.get(url, verify=False)
     soup = BeautifulSoup(req.content, 'html.parser')
     soup_string = str(soup)
     selector=etree.HTML(soup_string)
